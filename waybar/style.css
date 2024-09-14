@@ -1,0 +1,148 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: #2e3440;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    background-color: #3b4252;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #d8dee9;
+}
+
+#workspaces button:hover {
+    background: #e5e9f0;
+    color: #2e3440;
+    border-radius: 20px;
+}
+
+#workspaces button.focused {
+    color: #2e3440;
+    background-color: #e5e9f0;
+}
+
+#workspaces button.urgent {
+    color: #bf616a;
+}
+
+#workspaces button.active{
+    color: #2e3440;
+}
+
+#clock,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#custom-spotify,
+#tray,
+#custom-power
+{
+    padding: 0 10px;
+    color: #d8dee9;
+    background-color: #434c5e;
+}
+
+#pulseaudio{
+    color: #8fbcbb;
+}
+
+#memory {
+    color: #88c0d0;
+}
+
+#cpu{
+    color: #81a1c1;
+}
+
+#temperature {
+    color: #5e81ac;
+}
+
+#window,
+#workspaces {
+    color: #d8dee9;
+    background-color: #434c5e;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#network {
+    border-radius: 15px 0px 0px 15px;
+    margin-left: 15px;
+}
+
+#custom-power {
+    border-radius: 0px 15px 15px 0px;
+    margin-right: 20px;
+}
+
+#custom-spotify {
+    border-radius: 15px;
+    margin-left: 20px;
+}
+
+#tray {
+    border-radius: 0px 15px 15px 0px;
+}
+
+#pulseaudio {
+    border-radius: 15px 0px 0px 15px;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#network.disconnected {
+    background-color: #bf616a;
+}
+
+#temperature.critical {
+    background-color: #bf616a;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #bf616a;
+}
